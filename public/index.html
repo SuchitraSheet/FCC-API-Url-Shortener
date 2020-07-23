@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script type="text/javascript" src="verify.js"></script>
+<link rel = "stylesheet" type = "text/css" href = "style.css"/>
+   <head>      
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <header>
+        <h1>API Project: URL Shortener Microservice</h1>
+      </header>
+        
+        <h3>Short URL Creation </h3>
+        <p>
+          example: <code>POST https://api--fcc.glitch.me/api/shorturl/new</code> - <code>https://www.google.com</code>
+        </p>
+        <form id="input" method="GET">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="" required>
+          <p id = "check" style = "color: red"></p>
+          <input type="submit" value="POST URL" onclick = "UrlVerify()">
+        </form>
+   </body>
+
+
+</html>
