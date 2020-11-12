@@ -7,14 +7,14 @@
     "start": "node myApp.js"
   },
   "dependencies": {
-    "express": "^5.0.0-alpha.2",
-    "mongodb": "^2.2.5",
-    "mongoose": "^5.7.5",
+    "express": "^4.12.4",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.5.12",
     "cors": "^2.8.5",
     "body-parser": "^1.19.0"
   },
   "engines": {
-    "node": "^12.11.1"
+    "node": "^8.11.2"
   },
   "repository": {
     "type": "git",

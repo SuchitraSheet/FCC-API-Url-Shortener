@@ -1,4 +1,3 @@
-//mongodb for nodejs version 3.0 or later do not work. I am using the version 2.2.12 or later. Thanks to this link - https://stackoverflow.com/questions/49101567/mongodb-atlas-not-authorized-on-admin-to-execute-command
 var express = require("express");
 var dns = require("dns");
 
@@ -16,9 +15,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static("public"));
 appUrl = "https://api--fcc.glitch.me/";
-url =
-  process.env.MONGO_URI +
-  "?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+url = process.env.MONGO_URI;
+ //"?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 //process.env.MONGO_URI + '?retryWrites=true&w=majority';
 
 app.get("/new/:longUrl(*)", function(req, res) {  
@@ -35,9 +33,10 @@ app.get("/new/:longUrl(*)", function(req, res) {
         mongodb.connect(url, function(err, db) {
         if (err)
         {
+          console.log(err);
           res.send(err);
         }
-
+        //console.log("connected successfully");
         var collection = db.collection("Urlshort");
         var longUrl = req.params.longUrl;
         longUrl = longUrl.slice(8);
