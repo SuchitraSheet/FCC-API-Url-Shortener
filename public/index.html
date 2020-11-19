@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <html>
+<!-div id="root"/div->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 <script type="text/javascript" src="verify.js"></script>
 <link rel = "stylesheet" type = "text/css" href = "style.css"/>
@@ -20,11 +24,11 @@
         <p>
           example: <code>POST https://api--fcc.glitch.me/api/shorturl/new</code> - <code>https://www.google.com</code>
         </p>
-        <form id="input" method="GET">
+        <form id="input">
           <label for="url_input">URL to be shortened</label>
           <input id="url_input" type="text" name="url" value="" required>
-          <p id = "check" style = "color: red"></p>
-          <input type="submit" value="POST URL" onclick = "UrlVerify()">
+          <p id = "check" style = "color: red" ></p>
+          <input type="submit" id="posturl" value="POST URL" onclick = "UrlVerify()">
         </form>
    </body>
 

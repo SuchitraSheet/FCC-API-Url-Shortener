@@ -16,8 +16,6 @@ app.use(cors());
 app.use(express.static("public"));
 appUrl = "https://api--fcc.glitch.me/";
 url = process.env.MONGO_URI;
- //"?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
-//process.env.MONGO_URI + '?retryWrites=true&w=majority';
 
 app.get("/new/:longUrl(*)", function(req, res) {  
   longUrl = req.params.longUrl;
@@ -53,7 +51,7 @@ app.get("/new/:longUrl(*)", function(req, res) {
           if (err) {
             obj = { error: err };
           } else {
-            console.log(data.insertedCount);
+            //console.log(data.insertedCount);
             var l = data.ops[0].longUrl;
             var s = data.ops[0].shortUrl;
             obj = { original_url: l, short_url: s };
